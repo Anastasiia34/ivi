@@ -1,0 +1,206 @@
+.#{$prefix}-watch
+    padding: 100px 0 60px
+    background: url(#{$pic-path}/watchbg.png) no-repeat center bottom, $red
+    text-align: center
+    color: #ffffff
+    overflow: hidden
+    position: relative
+    .logo
+        display: block
+        margin-bottom: 25px
+    h1
+        margin-bottom: 100px
+    .center
+        right: 0
+    .video
+        overflow: visible
+        height: 366px
+        .owl-item
+            width: 652px!important
+            height: 366px
+            &:not(.center)
+                .vid-overlay
+                    background: rgba($red, .5)
+            &.center .vid-overlay
+                display: none
+        .owl-stage-outer
+            width: 1956px
+            overflow: visible
+        iframe, video
+            width: 652px
+            height: 366px
+        .vid-overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+        .owl-nav.disabled, .owl-dots.disabled
+            display: block
+        .owl-nav button.owl-prev, .owl-nav button.owl-next
+            position: absolute
+            top: calc(50% - 41px)
+        .owl-nav button.owl-prev
+            left: calc(50% - 375px)
+        .owl-nav button.owl-next
+            right: calc(50% - 375px)
+    h2
+        font-size: 50px
+        font-family: 'ivi medium', sans-serif
+        margin: 130px 0 80px
+        color: #ffffff
+    .review
+        .item   
+            padding: 50px 30px 60px
+            background: rgba(#000, .1)
+            border-radius: 20px
+            position: relative
+            margin: 45px 22px 20px
+            height: 295px
+        .text
+            text-align: left
+            height: 183px
+            overflow: hidden
+        .ava
+            position: absolute
+            width: 90px
+            height: 90px
+            border-radius: 50%
+            object-fit: cover
+            top: -45px
+            left: calc(50% - 45px)
+        .blue-btn
+            position: absolute
+            font-size: 16px
+            padding: 15px 30px
+            bottom: -20px
+            left: calc(50% - 80px)
+    .app-block
+        font-size: 22px
+        margin: 65px auto 90px
+        max-width: none
+        .row
+            margin: 15px auto 0
+    .sharing
+        h3
+            font-size: 22px
+            font-family: 'ivi medium', sans-serif
+            margin: 0
+            margin-bottom: 15px
+    .bird-block1
+        bottom: 70px
+        right: calc(50% - 330px)
+    .bird-block2
+        bottom: 30px
+        right: calc(50% - 430px)
+        transform: scale(.6) rotate(-40deg)
+    .bird-block3
+        bottom: 30px
+        left: calc(50% - 310px)
+        transform: scale(.65) rotate(-40deg)
+    @media (max-width: 1000px)
+        padding: 55px 0 45px
+        background: url(#{$pic-path}/watchbg-mid.png) no-repeat center bottom, $red
+        text-align: center
+        .logo img
+            height: 53px
+        h1
+            margin-bottom: 50px
+        .video
+            height: 250px
+            .owl-nav button.owl-prev
+                left: calc(50% - 245px)
+            .owl-nav button.owl-next
+                right: calc(50% - 245px)
+        .video .owl-item, .video iframe, .video video
+            width: 400px!important
+            height: 250px
+        .video .owl-stage-outer
+            width: 1200px
+        h2
+            margin: 50px 0 45px
+        .review .item
+            height: 135px
+            padding: 35px 30px 40px
+        .review .ava
+            width: 64px
+            height: 64px
+            left: calc(50% - 32px)
+        .review .text
+            height: 61px
+        .review .blue-btn
+            font-size: 10px
+            padding: 12px 25px
+            bottom: -17px
+            left: calc(50% - 62px)
+        .owl-carousel.review
+            .owl-nav button.owl-prev, .owl-nav button.owl-next
+                position: absolute
+                top: 70px
+            .owl-nav button.owl-prev
+                left: calc(50% - 360px)
+            .owl-nav button.owl-next
+                right: calc(50% - 360px)
+            .owl-nav button.owl-prev.disabled, .owl-nav button.owl-next.disabled
+                opacity: 0.5
+        .app-block
+            margin: 30px auto 65px
+            font-size: 14px
+        .sharing h3
+            font-size: 14px
+        .bird-block1
+            right: calc(50% - 270px)
+        .bird-block2
+            right: calc(50% - 320px)
+        .bird-block3
+            left: calc(50% - 260px)
+    @media (max-width: 700px)
+        padding: 50px 0 20px
+        background: url(#{$pic-path}/watchbg-mob.png) no-repeat center bottom, $red
+        .#{$prefix}-container
+            max-width: 275px
+        .logo 
+            margin-bottom: 15px
+            img
+                height: 32px
+        .video
+            height: 150px
+            .owl-nav button.owl-prev
+                left: calc(50% - 167px)
+            .owl-nav button.owl-next
+                right: calc(50% - 167px)
+        .video .owl-item, .video iframe, .video video
+            width: 250px!important
+            height: 150px
+        .video .owl-stage-outer
+            width: 750px
+        h1
+            margin-bottom: 30px
+        h2
+            font-size: 21px
+            margin: 30px 0 25px
+        .review .ava
+            width: 55px
+            height: 55px
+            left: calc(50% - 27px)
+        .review .item
+            padding: 20px 10px 20px
+            height: 115px
+        .review .blue-btn
+            font-size: 8px
+            padding: 8px 17px
+            bottom: -12px
+            left: calc(50% - 45px)
+        .owl-carousel.review
+            .owl-nav button.owl-prev, .owl-nav button.owl-next
+                position: absolute
+                top: 65px
+            .owl-nav button.owl-prev
+                left: calc(50% - 130px)
+            .owl-nav button.owl-next
+                right: calc(50% - 130px)
+        .app-block
+            margin: 70px 0 90px
+        .sharing h3
+            font-size: 10px
+            margin-bottom: 0                

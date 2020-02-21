@@ -1,0 +1,131 @@
+.#{$prefix}-coach
+    padding: 170px 0 210px
+    background: url(#{$pic-path}/coachbg.png) no-repeat center
+    position: relative
+    overflow: hidden
+    .ivi-wrapper
+        max-width: 500px
+        margin-left: 420px
+    .num
+        margin-left: 5px
+        font-family: 'ivi', sans-serif
+    .app-block
+        margin-top: 50px
+    .wheel
+        position: absolute
+        bottom: 0
+        animation: wheels 3s linear infinite
+    .wheel1
+        left: calc(50% - 1190px)
+    .wheel2
+        left: calc(50% - 595px)
+    .crab-block
+        position: absolute
+        top: 163px
+        left: calc(50% - 407px)
+    .crab
+        position: relative
+    .crab-claw
+        position: absolute
+        top: 30px
+        right: 15px
+        transform-origin: 0% 100%
+        animation: crab 2s infinite alternate
+    .chick
+        position: absolute
+        bottom: 0
+        right: calc(50% - 300px)
+        animation: chick .8s infinite alternate
+    .talk
+        transform: rotate(-8.69deg)
+        top: 180px
+        left: calc(50% - 290px)
+        color: #C42323
+    .dog-block
+        position: absolute
+        bottom: 0
+        right: calc(50% - 630px)
+    .dog
+        position: relative
+    .dog-ear1
+        position: absolute
+        left: 122px
+        transform-origin: 0% 0%
+        animation: ears 1s infinite alternate
+    .dog-ear2
+        position: absolute
+        left: 140px
+        transform-origin: 0% 0%
+        animation: ears 1s .2s infinite alternate
+    .dog-wheel
+        position: absolute
+        animation: wheels 1s linear infinite
+    .dog-wheel
+        bottom: 0
+        left: 0
+    .dog-wheel:nth-child(2)
+        right: 15px
+        left: auto
+    @media (max-width: 1000px)
+        padding: 135px 0 150px
+        background: url(#{$pic-path}/coachbg-mid.png) no-repeat center
+        background-size: cover
+        .ivi-wrapper
+            max-width: 350px
+            margin-left: auto
+        .wheel1
+            display: none
+        .wheel2
+            width: 220px
+            left: calc(50% - 425px)
+        .crab-block
+            transform: scale(.7)
+            top: 83px
+            left: calc(50% - 340px)
+        .app-block
+            margin-top: 40px
+        .talk
+            top: 130px
+            left: calc(50% - 210px)
+        .chick
+            width: 91px
+            right: calc(50% - 140px)
+        .dog-block
+            transform-origin: bottom
+            transform: scale(.7)
+            right: calc(50% - 420px)
+    @media (max-width: 700px)
+        padding: 45px 0 295px
+        background: url(#{$pic-path}/coachbg-mob.png) no-repeat center
+        background-size: cover
+        .wheel2
+            width: 130px
+            left: calc(50% - 165px)
+        .app-block
+            margin-top: 20px
+        .crab-block
+            transform: scale(0.4)
+            top: 198px
+            left: calc(50% - 185px)
+        .talk
+            top: 270px
+            left: calc(50% - 55px)
+            text-align: left
+        .chick
+            width: 55px
+            right: calc(50% - 50px)
+        .dog-block
+            transform: scale(0.5)
+            right: calc(50% - 260px)
+@keyframes wheels
+    100%
+        transform: rotate(-360deg)
+@keyframes crab
+    100%
+        transform: rotate(-15deg)
+@keyframes chick
+    100%
+        transform: translateY(-30px)
+@keyframes ears
+    100%
+        transform: scaleX(1.1)

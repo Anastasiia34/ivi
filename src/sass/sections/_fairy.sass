@@ -1,0 +1,114 @@
+.#{$prefix}-fairy
+    background: url(#{$pic-path}/fairybg.png) no-repeat center
+    padding: 200px 0 15px
+    position: relative
+    .ivi-wrapper
+        max-width: 421px
+        margin-left: 420px
+    .app-block
+        margin-top: 80px
+    .stars
+        position: absolute
+        width: 255px
+        height: 250px
+        top: 185px
+        left: calc(50% - 515px)
+    .star1, .star2, .star3, .star4, .star5
+        position: absolute
+    .star1
+        right: 0
+        top: 0
+        animation: sparkles .5s ease-in infinite
+    .star2
+        top: 115px
+        right: 35px
+        animation: sparkles .6s ease-in infinite
+    .star3
+        bottom: 45px
+        left: 130px
+        animation: sparkles .7s ease-in infinite
+    .star4
+        bottom: 45px
+        left: 50px
+        animation: sparkles .8s ease-in infinite
+    .star5
+        bottom: 0
+        left: 0
+        animation: sparkles .9s ease-in infinite
+    .foot-note
+        margin-top: 150px
+        color: #3B3B3B
+        opacity: 0.5
+        font-size: 13px
+    .talk
+        color: #AD1F30
+        transform: rotate(-8.69deg)
+        top: 90px
+        left: 30px
+    .fairy-block
+        position: absolute
+        top: 240px
+        right: calc(50% - 630px)
+        br
+            display: none
+    .fairy
+        position: relative
+    .fairy-hand
+        position: absolute
+        top: 140px
+        left: 27px
+        transform-origin: 100% 20%
+        animation: fairy-hand 1s ease-out infinite alternate
+    .fairy-wing1, .fairy-wing2
+        position: absolute
+        transform-origin: 0% 100%
+    .fairy-wing1
+        animation: fairy-wing .1s ease-out infinite alternate
+        left: 90px
+        top: 8px
+    .fairy-wing2
+        animation: fairy-wing .1s .1s ease-out infinite alternate
+        left: 110px
+        top: 60px
+    @media (max-width: 1000px)
+        padding: 135px 0 15px
+        background: url(#{$pic-path}/fairybg-mid.png) no-repeat center
+        background-size: cover
+        .ivi-wrapper
+            margin-left: 300px
+            max-width: 300px
+        .stars
+            top: 125px
+            left: calc(50% - 390px)
+            transform: scale(0.6)
+        .fairy-block
+            transform: scale(0.55)
+            top: 85px
+            right: calc(50% - 460px)
+            br
+                display: block
+        .talk
+            transform: scale(1.55) rotate(-8.69deg)
+        .foot-note
+            font-size: 10px
+    @media (max-width: 700px)
+        padding: 225px 0 15px
+        background: url(#{$pic-path}/fairybg-mob.png) no-repeat center
+        background-size: cover
+        .ivi-wrapper
+            margin: 0
+        .app-block
+            margin-top: 95px
+        .foot-note
+            margin-top: 0
+@keyframes sparkles
+    50%
+        transform: scale(0)
+    100%
+        transform: scale(1.5)
+@keyframes fairy-hand
+    to
+        transform: rotate(15deg)
+@keyframes fairy-wing
+    to
+        transform: rotate(5deg)

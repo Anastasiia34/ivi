@@ -1,0 +1,106 @@
+.#{$prefix}-king
+    padding: 180px 0 170px
+    background: url(#{$pic-path}/kingbg.png) no-repeat center
+    position: relative
+    overflow: hidden
+    .ivi-wrapper
+        max-width: 530px
+        margin-left: auto
+    .app-block
+        margin-top: 45px
+    .talk
+        top: 110px
+        left: calc(50% - 530px)
+        text-align: right
+        color: #AD1F30
+    .closed-book
+        position: absolute
+        top: 195px
+        left: calc(50% - 740px)
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite
+    .opened-book
+        position: absolute
+        bottom: 90px
+        right: calc(50% - 660px)
+        .text
+            position: absolute
+            transform: rotate(20deg)
+            top: 39px
+            left: 41px
+            width: 48px
+        .line
+            border-bottom: 1.2074px solid #D0D2D3
+        .line+.line
+            margin-top: 7px
+        .line:first-child
+            animation: animated-text 1s normal both
+        .line:nth-child(2)
+            animation: animated-text 1s 1s normal both
+        .line:nth-child(3)
+            animation: animated-text 1s 2s normal both
+        .line:nth-child(4)
+            animation: animated-text 1s 3s normal both
+        .line:nth-child(5)
+            animation: animated-text 1s 4s normal both
+        .line:nth-child(6)
+            animation: animated-text 1s 5s normal both
+        .line:nth-child(7)
+            animation: animated-text 1s 6s normal both
+        .line:nth-child(8)
+            animation: animated-text 1s 7s normal both
+        .line:nth-child(9)
+            animation: animated-text 1s 8s normal both
+    @media (max-width: 1000px)
+        padding: 120px 0
+        background: url(#{$pic-path}/kingbg-mid.png) no-repeat center
+        background-size: cover
+        .ivi-wrapper
+            max-width: 400px
+        .app-block
+            margin-top: 30px
+        .talk
+            top: 80px
+            left: calc(50% - 290px)
+        .closed-book
+            width: 73px
+            top: 120px
+            left: calc(50% - 350px)
+        .opened-book
+            right: calc(50% - 400px)
+            transform: scale(.7)
+            bottom: 40px
+    @media (max-width: 700px)
+        padding: 130px 0 260px
+        background: url(#{$pic-path}/kingbg-mob.png) no-repeat center
+        background-size: cover
+        .opened-book
+            bottom: auto
+            top: 0
+            right: calc(50% - 80px)
+            transform: scale(0.4)
+            top: -10px
+        .app-block
+            margin-top: 15px
+        .talk
+            top: auto
+            bottom: 200px
+            left: calc(50% - 100px)
+        .closed-book
+            top: auto
+            bottom: 150px
+            width: 43px
+            left: calc(50% - 140px)
+@keyframes shake
+  10%, 90% 
+    transform: translate3d(-1px, 0, 0)
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+  40%, 60% 
+    transform: translate3d(4px, 0, 0)
+@keyframes animated-text
+    from
+        width: 0
+    to
+        width: 48px

@@ -1,0 +1,35 @@
+$prefix: 'ivi';
+$pic-path: '../src/images';
+
+$color-scheme: (
+    "white": #ffffff,
+    "black": #000000,
+    "gray": #636363,
+	"gray-light": #fafafa,
+    "green": #00b1b1,
+    "green2": #00b0af,
+    "green-light": #c8eae9,
+    "green-dark": #00a4a8,
+    "red": #EC174F
+);
+
+$dark-blue: #281F55;
+
+$dark-violet: #723558;
+
+$red: #EC174F;
+
+@function getColor($name) {
+    @return map_get($color-scheme, quote($name));
+}
+
+$media: (
+    "xs": 320px,
+    "sm": 580px,
+    "md": 960px,
+    "lg": 1200px
+);
+
+@function breakpoint($name) {
+    @return map_get($media, quote($name));
+}

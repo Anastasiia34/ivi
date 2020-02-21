@@ -1,0 +1,139 @@
+html, body
+	scroll-behavior: smooth
+.#{$prefix}
+	&-main
+		color: $dark-blue
+		font-family: 'ivi', sans-serif
+		line-height: 1.4
+		font-size: 18px
+		@media (max-width: 1000px)
+			font-size: 12px
+		@media (max-width: 700px)
+			text-align: center
+			font-size: 10px
+		img
+			max-width: 100%
+		section
+			overflow: hidden
+		h1
+			font-family: 'ivi black', sans-serif
+			margin: 0
+			font-size: 50px
+			line-height: 1.2
+			@media (max-width: 1000px)
+				font-size: 35px
+			@media (max-width: 700px)
+				font-size: 21px
+		h2
+			margin: 0
+			font-family: 'ivi black', sans-serif
+			font-size: 38px
+			margin-bottom: 30px
+			line-height: 1.2
+			color: $dark-violet
+			@media (max-width: 1000px)
+				font-size: 27px
+				margin-bottom: 15px
+			@media (max-width: 700px)
+				font-size: 16px
+		.blue-btn
+			font-family: 'ivi medium', sans-serif
+			color: #ffffff
+			font-size: 20px
+			background: $dark-blue
+			border-radius: 33.5px
+			padding: 20px 35px
+			display: inline-block
+			@media (max-width: 1000px)
+				font-size: 14px
+				text-transform: uppercase
+		.app-block
+			max-width: 350px
+			.row
+				max-width: 275px
+				display: flex
+				justify-content: space-between
+				margin: 0
+				margin-top: 15px
+			@media (max-width: 1000px)
+				max-width: 220px
+				font-size: 11px
+				.row
+					max-width: 200px
+					margin-top: 10px
+				a:nth-child(2) img
+					width: 88px
+				img
+					width: 96px
+			@media (max-width: 700px)
+				max-width: none
+				font-size: 10px
+				p
+					max-width: 200px
+					margin: 0 auto
+				.row
+					margin: 10px auto 0
+		.talk
+			position: absolute
+			font-family: 'Neucha', sans-serif
+			font-size: 16px
+			transform: rotate(-7.21deg)
+			@media (max-width: 1000px)
+				font-size: 11px
+			@media (max-width: 700px)
+				font-size: 10px
+		p span
+            font-family: 'ivi bold', sans-serif
+		.bird-block
+			position: absolute
+			.bird-wrapper
+				transform-origin: 35% 50%
+				animation: rotating 2s linear alternate infinite
+			.bird
+				position: relative
+			.bird-body
+				position: relative
+				z-index: 1
+			.wing1
+				position: absolute
+				left: 6px
+				transform-origin: 100% 100%
+			.wing2
+				position: absolute
+				right: 5px
+				top: 38px
+				transform-origin: 0 80%
+			&.clicked
+				.bird
+					animation: scaling 5s linear forwards
+				.wing1
+					animation: wing1 2s linear alternate infinite
+				.wing2
+					animation: wing2 2s linear alternate infinite
+			@media (max-width: 1000px)
+				width: 81px
+				.wing1
+					width: 22.6px
+				.wing2
+					top: 25px
+					width: 26.3px
+			@media (max-width: 700px)
+				width: 49px
+				.wing1
+					width: 14px
+				.wing2
+					width: 16px
+					top: 15px
+					right: 2px
+@keyframes rotating
+	to
+		transform: rotate(-15deg)
+@keyframes wing1
+	to
+		transform: rotate(-50deg)
+@keyframes wing2
+	to
+		transform: rotate(35deg)
+@keyframes scaling
+	to
+		transform: scale(1.5)
